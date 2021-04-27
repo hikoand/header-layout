@@ -61,9 +61,18 @@ div.submenu_container {
   overflow: hidden;
 }
 
+#header .inner > ul {
+  height: 100%;
+}
+
 #header .inner > ul > li {
+  height: 100%;
+  line-height: 90px;
   float: left;
   text-transform: uppercase;
+}
+#header .inner > ul > li > a {
+  display: inline-block;
 }
 
 #header .inner > ul > li > a:hover {
@@ -73,18 +82,24 @@ div.submenu_container {
 }
 
 #header .inner > ul#gnb > li {
-  padding: 45px 0;
   margin-right: 50px;
+}
+
+#header .inner > ul#gnb > li:last-child {
+  margin-right: 0;
 }
 
 #header .inner > ul#login_menu > li {
   padding-right: 20px;
 }
+#login_menu li .cart {
+  position: relative;
+}
 
 #login_menu li span.count {
   font-size: 6px;
-  position: absolute;
-  top: 30px;
+  /* position: absolute;
+  top: 30px; */
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -95,6 +110,8 @@ div.submenu_container {
   color: white;
   margin-left: 2px;
   padding-bottom: 1px;
+  position: absolute;
+  top: 29px;
 }
 
 #header .inner > ul#login_menu > li:last-child,
@@ -169,4 +186,25 @@ li.dropdown:hover > .submenu_container {
   font-weight: bold;
   border-bottom: 1px solid #b7b7b7;
   padding-bottom: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .inner {
+    min-width: 500px;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+  }
+
+  #logo {
+    /* position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+     */
+    line-height: 90px;
+  }
+
+  #gnb {
+    display: none;
+  }
 }
